@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit</title>
+  <style>
+.edit1
+{	background-color:blue;
+    padding:10px;
+	font-size:30px;
+	color:white;
+}
+
+  </style>
+</head>
+<body>
+<div class="edit1"> <center> EDIT  </center> </div>
+
+
+<div class="edit2">
+
+        CUSTOMER DETAILS (table views)
+    </div>
+    <div class="edit3">
+
+    <table>
+        <form name="form" action="/customerupdate" method="POST">
+
+          {% for row in data %}
+        <tr>
+            <td>Customer ID  </td>
+          <td> <input type ="text"value="{{ row[0] }}" name="Customer_ID"> </td>
+        </tr>
+       <tr>     <td>Customer Name  </td>
+        <td> <input type ="text"value="{{ row[1] }}" name="Customer_Name"> </td>
+       </tr>
+       <tr>      <td> Customer phone No </td>
+          <td> <input type ="text"value="{{ row[2] }}" name="Customer_Phone_no"> </td>
+       </tr>
+       <tr>      <td> Customer Address </td>
+          <td> <input type ="text"value="{{ row[3] }}" name="Customer_Address"> </td>
+       </tr>
+       <tr>      <td> Customer Gmail </td>
+          <td> <input type ="text"value="{{ row[4] }}" name="Customer_Mail"> </td>
+       </tr>
+
+        <tr>
+          <td> <input type="submit"> </td>
+
+        </tr>
+
+
+
+        {% endfor %}
+
+</form>
+    </table>
+
+
+
+</div>
+
+
+
+</body>
+</html>

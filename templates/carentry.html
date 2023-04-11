@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>entry</title>
+  <style>
+    .entry1
+{	background-color:darkgrey;
+	padding:10px;
+	color:black;
+	font-weight:bold;
+	font-size:20px;
+}
+.entry2
+{	background-color:#eee;
+	padding:50px 350px;
+	color:black;
+
+}
+.textbox
+ {
+    padding:10px;
+    width:100%;
+    border:1px solid #aaa;
+    border-radius:5px;
+}
+.btn
+{
+    background-color:green;
+    color:yellow;
+   padding:10px;
+    width:100%;
+    border:1px solid #aaa;
+    border-radius:5px;
+
+}
+
+
+
+  </style>
+</head>
+<body>
+<div class="entry1">
+  <center> Customer Entry </center>
+</div>
+
+
+<div class="entry2">
+    <form name ="form" action ="customersave" method="POST">
+
+   Customer_ID : <br>  <input type="text" class="textbox" name="customerid"> <br> <br>
+  Customer_Name :  <br> <input type="text" class="textbox" name="customername"> <br>  <br>
+  Customer_Phone_NO :  <br> <input type="text"class="textbox" name="customerphoneno"> <br> <br>
+  Customer_Address :  <br> <input type="text" class="textbox" name="customeraddress"> <br> <br>
+  Customer_Gmail : <br> <input type="text" class="textbox" name="customergmail"> <br> <br>
+ <input type="submit" value="Save" class="btn">
+
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>carcass</title>
+  <style>
+   .customer1
+{	background-color:white;
+    padding:20px;
+	font-weight:bold;
+}
+
+ .custo
+{	background-color:white;
+    padding:10px;
+    font-size:20px;
+}
+.c11
+{
+    background-color:#fff;
+    padding:10px;
+    font-size:20px;
+    }
+
+        th
+        {
+            background-color:white;
+            padding:10px;
+            }
+            .details
+            {
+                background-color:white;
+                }
+
+                    a
+                    {
+                     background-color:red;
+                     padding:05px;
+                    }
+                    .bb
+                    {
+                     background-color:green;
+                     padding:05px;
+                    }
+                    .aaa
+                    {
+                        background-color:white;
+                        padding:10px;
+                        color:red;
+                        font-size:20px;
+                        }
+                        .img
+                           {
+                            text-align:right;
+
+                        }
+
+
+  </style>
+</head>
+<body>
+<div>
+ {% include "header.html" %}
+</div>
+
+
+
+    <div class="customer1">
+
+
+
+
+
+
+
+        <div class="c11">
+               <form name="form" action="/carcass" method="POST">
+
+
+<div class="details">
+  <table> <tr> <td>
+      {%  for row in data  %}
+                  Name {{ row[1] }}<br>
+                  Color {{ row[4] }}<br>
+                  Rate {{ row[3] }}
+
+</div>
+                </td>
+                <td> </td> </td> </td>
+                <td>
+                    <div class="img">
+                 <img src="/static/{{ row [2] }}" width="550" height="400">  </td>
+        </div>
+                </tr>
+        {% endfor %}
+
+                </table>
+
+
+            </form>
+
+        </div>
+
+<a class="menu" href="/order">order</a>
+
+    </div>
+
+<div> {% include "footer.html" %}  </div>
+
+
+</body>
+</html>

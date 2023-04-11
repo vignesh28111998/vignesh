@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>familysdetails</title>
+  <style>
+      .customer1
+{	background-color:white;
+    padding:20px;
+	font-weight:bold;
+}
+
+ .custo
+{	background-color:white;
+    padding:10px;
+    font-size:20px;
+}
+.c11
+{
+    background-color:#fff;
+    padding:10px;
+    font-size:20px;
+    }
+
+        th
+        {
+            background-color:white;
+            padding:10px;
+            }
+            .details
+            {
+                background-color:white;
+                }
+
+                    a
+                    {
+                     background-color:red;
+                     padding:05px;
+                    }
+                    .bb
+                    {
+                     background-color:green;
+                     padding:05px;
+                    }
+                    .aaa
+                    {
+                        background-color:white;
+                        padding:10px;
+                        color:red;
+                        font-size:20px;
+                        }
+                        .img
+                           {
+                            text-align:right;
+
+                        }
+
+
+  </style>
+</head>
+<body>
+<div>
+ {% include "header.html" %}
+</div>
+
+
+
+    <div class="customer1">
+
+
+
+
+
+
+
+        <div class="c11">
+               <form name="form" action="/familysdetalis" method="POST">
+
+
+<div class="details">
+  <table> <tr> <td>
+      {%  for row in data  %}
+                  Car_ID {{ row[0] }} <br>
+                  Car_Name {{ row[1] }}<br>
+                  Car_Details {{ row[3] }}<br>
+                  car_Color {{ row[4] }}<br>
+                  Fule_Type {{ row[5] }}<br>
+                  ar_Rate {{ row[6] }}<br>
+                  Speed {{ row[7] }}<br>
+                  Mileage {{ row[8] }}<br>
+                  Engine-Type {{ row[9] }}<br>
+                  sale_Type {{ row[10] }}
+
+</div>
+                </td>
+                <td> </td> </td> </td>
+                <td>
+                    <div class="img">
+                 <img src="/static/{{ row [2] }}" width="550" height="400">  </td>
+        </div>
+                </tr>
+        {% endfor %}
+
+                </table>
+
+
+            </form>
+
+        </div>
+
+<a class="menu" href="/order">order</a>
+
+    </div>
+
+<div> {% include "footer.html" %}  </div>
+
+
+</body>
+</html>
